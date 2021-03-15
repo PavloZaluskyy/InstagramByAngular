@@ -94,6 +94,7 @@
 	padding: 13px 17px;
 }
 .fa-heart {cursor: pointer;}
+.fa-comment{cursor: pointer;}
 i.active{color: red;}
 .like_and_comment i{
 	margin-right: 17px;

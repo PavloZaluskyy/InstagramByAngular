@@ -28,7 +28,7 @@
         <div class="like_block">
             <div class="like_and_comment">
                 <i (click)="likes(post)" [ngClass]="{'active': isLikeActive}" id="post_{{post.id}}" class="far fa-heart"></i>
-                <i class="far fa-comment"></i>
+                <i (click)="toggleFormComment()" class="far fa-comment"></i>
                 <i class="fas fa-sign-out-alt"></i>
             </div>
             <div class="save">
@@ -57,7 +57,13 @@
                 [visibleComments] = "visibleComments"
             ></app-comment-item>
         </div>
-        
+        <app-create-comment 
+            *ngIf="activeFormComment"
+            (newComment)="addComment($event)"
+        ></app-create-comment>
+        <div class="date">
+            <span>{{post.createdAt | date }}</span>
+        </div>
         
     </div>
 </div>

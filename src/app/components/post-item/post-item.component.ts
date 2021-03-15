@@ -12,28 +12,48 @@ export class PostItemComponent implements OnInit {
   @Input() post: Posts;
   @Output() idDelete = new EventEmitter<number>();
 
+  EMAIL = "guest@gmail.com";
+  NAME = "guest";
+
+
 
   comments: Comments[] = [];
   isLikeActive: boolean = false;
   visibleComments: boolean = false;
+  activeFormComment: boolean = false;
   isLoad: boolean = false;
   constructor(
     private commentsService: CommentsService
   ) { }
 
 
-  likes(elem:any):void {
+  addComment(increased:any){
+    const newComment:Comments = {
+      id: Date.now(),
+      postId: this.post.id,
+      email: this.EMAIL,
+      body: increased,
+      name: this.NAME
+    } 
+    this.comments.push(newComment)
+  }
+
+  public likes(elem:any):void {
     !this.isLikeActive ? elem.likes++ : elem.likes--
     this.isLikeActive = !this.isLikeActive;
     elem.isisLikeActive = this.isLikeActive;
   }
 
-  deletePost(increased:any){
+  public deletePost(increased:any){
     this.idDelete.emit(increased);
   }
 
   public toggleAllComments(): void {
     this.visibleComments = !this.visibleComments;
+  }
+
+  public toggleFormComment(): void {
+    this.activeFormComment = !this.activeFormComment;
   }
 
   ngOnInit(): void {

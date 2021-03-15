@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i (click)="send()" class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" [(ngModel)]="comment" (keyup.enter)="send()" class="materialize-textarea"></textarea>
+          <label *ngIf="!err" for="icon_prefix2">Comment</label>
+          <label *ngIf="err"  class="err">Enter something!!!</label>
+        </div>
+      </div>
+    </div>
+</div>
