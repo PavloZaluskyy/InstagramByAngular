@@ -1,0 +1,30 @@
+footer{
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	background: #fff;
+	position: fixed;
+	border-top: 1px solid #E6E6E6;
+}
+
+footer .container{
+	height: auto;
+}
+footer .container ul {
+	height: auto;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+footer .container ul li i{
+	font-size: 24px;
+}
+footer .container ul{
+	padding: 10px 0;
+	margin: 0;
+}
+@media (max-width: 767px) { footer .container ul{
+	padding: 10px 0;
+}}

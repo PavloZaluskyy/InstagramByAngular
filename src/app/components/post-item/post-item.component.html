@@ -1,0 +1,63 @@
+<div class="top_block">
+    <div class="container">
+        <div class="avatar">
+            <img [src]="post.imageUrl" alt="Фото профиля">
+
+            <div class="user_name">
+                {{post.userName}}
+            </div>
+        </div>
+        <div class="three_point" ><strong>...</strong>
+            <ul class="delete_post">
+                <li>
+                    <span  (click)="deletePost(post.id)">
+                         Удалить пост
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="foto_block">
+    <div class="container">
+        <img [src]="post.imageUrl" alt="post {{post.id}}">
+    </div>
+</div>
+<div class="description_block">
+    <div class="container">
+        <div class="like_block">
+            <div class="like_and_comment">
+                <i (click)="likes(post)" [ngClass]="{'active': isLikeActive}" id="post_{{post.id}}" class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <div class="save">
+                <i class="far fa-bookmark"></i>
+            </div>
+        </div>
+        <div class="count_like">
+            {{post.likes}} отметок "Нравится"
+        </div>
+        <div class="description">
+            <span class="user_name">{{post.userName}}</span>
+            <span>{{post.description}}</span>
+        </div>
+        <div class="comments">
+            <span class="comments_more" *ngIf="comments.length > 3"
+                (click)="toggleAllComments()">
+                <a>
+                    <span *ngIf="!visibleComments">Посмотреть</span> <span *ngIf="visibleComments"> Скрыть</span> все комментарии
+                        ({{comments.length}})
+                </a>
+            </span>
+            <div class="loader"*ngIf="!isLoad" ><app-loader></app-loader></div>
+            <app-comment-item *ngFor="let comment of comments; index as index"
+                [comment] = "comment"
+                [index] = "index"
+                [visibleComments] = "visibleComments"
+            ></app-comment-item>
+        </div>
+        
+        
+    </div>
+</div>

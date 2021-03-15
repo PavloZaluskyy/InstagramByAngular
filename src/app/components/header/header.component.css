@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+header{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	z-index: 30;
+	position: fixed;
+	border-bottom: 1px solid #E6E6E6;
+}
+header .container{
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .container div p i{
+	font-size: 24px;
+}
+header .container div p{
+	font-family: 'Dancing Script', cursive;
+	font-size: 29px;
+	padding: 20% 0;
+	margin: 0;
+}
+
+@media (max-width: 767px) { header .container div p{
+	padding: 5% 0;
+}}

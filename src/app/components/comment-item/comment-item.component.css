@@ -1,0 +1,5 @@
+.description_more, .comments_more{ color: #999!important; padding-left: 5px; cursor: pointer; font-weight: 500!important;}
+.comments_more{padding: 5px 14px;}
+.comment{width: 100%; padding-left: 13px; padding-top: 13px;}
+.comment i{text-align: right;}
+.description .user_name, .comment .user_name{ font-weight: bold; padding-right: 5px; }

@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <div class="loader"*ngIf="!isLoad" ><app-loader></app-loader></div>
+    <app-post-item 
+        *ngFor="let post of posts"
+        [post]="post"
+        (idDelete)="deletePost($event)"
+        >
+        
+    </app-post-item>
+</div>

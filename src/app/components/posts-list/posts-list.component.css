@@ -1,0 +1,17 @@
+.wrapper{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	margin-top: 102px;
+	margin-bottom: 30px;
+}
+.loader{text-align: center;}
+@media (min-width: 196px) and (max-width: 767px) {.wrapper {
+	margin-top: 55px;
+}}
+@media (min-width: 165px) and (max-width: 195px) {.wrapper {
+	margin-top: 115px;
+}}
+@media (max-width: 164px) {.wrapper {
+	margin-top: 161px;
+}}

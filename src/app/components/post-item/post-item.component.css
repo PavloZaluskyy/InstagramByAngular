@@ -1,0 +1,223 @@
+.wrapper{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	margin-top: 102px;
+	margin-bottom: 30px;}
+@media (min-width: 196px) and (max-width: 767px) {.wrapper {
+	margin-top: 55px;
+	}}
+@media (min-width: 165px) and (max-width: 195px) {.wrapper {
+	margin-top: 115px;
+	}}
+@media (max-width: 164px) {.wrapper {
+	margin-top: 161px;
+	}}
+.top_block{
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+.top_block .container{
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.avatar{ padding: 10px 0 10px 20px; display: flex; flex-wrap: wrap; align-items: center;}
+.avatar img{width: 32px; height: 32px; border-radius: 100%;}
+@media (max-width: 250px) {.avatar {
+	padding: 10px 0 10px 5px;
+	}}
+@media (max-width: 180px) {.avatar {
+	width: 100%;
+	}}
+.user_name{
+	margin-left: 10px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #262626;
+}
+
+.three_point{
+	
+	text-align: right;
+	font-size: 24px;
+	cursor:  pointer;
+	margin-top: -10px;
+	margin-right: 20px;
+	 }
+@media (max-width: 250px) {.three_point {
+	margin-right: 5px;
+	}}
+	/*.delete_post{
+		flex: 1;
+		text-align: right;
+		//font-size: 24px;
+		cursor:  pointer;
+		margin-top: -10px;
+		margin-right: 20px;
+	}*/
+.delete_post span{
+	padding-left: 20px;
+}
+.foto_block{
+	width: auto;
+	height: 100%;
+}
+@media (max-width: 767px) {.foto_block .container {
+	width: 100%!important; max-width: 100%!important; margin: 0!important; padding: 0;
+	}}
+
+.foto_block .container img{width: 100%; height: auto; max-height: 75vh!important; }
+@media (max-width: 767px) {.foto_block .container img {
+	max-height: none; height: 100%;
+	}}
+.description_block{
+	width: 100%;
+	height: auto;
+	margin-bottom: 60px;
+}
+.description_block .container .like_block{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.like_and_comment{
+	padding: 13px 17px;
+}
+.fa-heart {cursor: pointer;}
+i.active{color: red;}
+.like_and_comment i{
+	margin-right: 17px;
+}
+.fa-sign-out-alt{
+-moz-transform: rotate(270deg);
+-webkit-transform: rotate(270deg);
+-o-transform: rotate(270deg);
+-ms-transform: rotate(270deg);
+transform: rotate(270deg);
+}
+.loader{text-align: center;}
+.save{
+	margin-right: 17px;
+}
+.count_like{
+	font-weight: 600;
+    color: #262626;
+    font-size: 14px;
+    padding: 0px 17px 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.description{
+	padding: 0 5px 13px;
+}
+.description .user_name, .comment .user_name{font-weight: bold; padding-right: 5px; }
+
+.description_more, .comments_more{ color: #999!important; padding-left: 5px; cursor: pointer; font-weight: 500!important;}
+.comments_more{padding: 5px 14px;}
+.comment{width: 100%; padding-left: 5px; padding-top: 5px;}
+.comment i{text-align: right;}
+.date{
+	font-size: 10px;
+    letter-spacing: .2px;
+    color: #999;
+    text-transform: uppercase;
+    padding: 11px 14px 14px;
+}
+
+
+.add_block{
+	width: 100%;
+	height: 100vh;
+  	z-index: 100;
+  display: none;
+	position: fixed;
+	background: #fff;
+}
+.close_add{
+	position: absolute;
+	font-size: 2.5em;
+	right: 5%;
+	color: #999;
+	top: 5%;
+	font-weight: 600;
+}
+
+.add_block .form{
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.add_block .form .in_form{
+	padding: 15px;
+	border-radius: 20px;
+	border: 1px solid gray;
+}
+@media (max-width: 320px) {.add_block .form .in_form{
+		padding: 3%;
+		border: none;
+}}
+
+.previe_post,  .previe_avatar{display: none;}
+
+.three_point{
+	position: relative;
+}
+.in_form div{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#new_name{
+	margin-left: 15px;
+}
+
+@media (max-width: 500px) {.in_form div{
+	margin: 0;
+}}
+
+.delete_post{
+	background: #fff;
+	position: absolute;
+	text-align: center;
+	padding: 0 10px;
+	right: 30px;
+	top: 15%;
+	z-index: 5;
+	width: 250px;
+	
+  opacity: 0;
+	transform: scaleY(0);
+	transform-origin :0 0;
+  transition: .5s ease-in-out;	
+}
+
+.three_point:hover .delete_post {
+	opacity: 1;
+	  transform: scaleY(1);
+  }
+  
+
+.add_avatar, #new_img{margin-left:  15px;}
+@media (max-width: 400px) {.add_avatar, #new_img{
+	margin-left: 0; 
+}}
+@media (min-width: 450px) and (max-width: 500px) {.add_avatar, #new_img{
+	margin-top: 15px; 
+}}
+
+.hide{
+	display: none;
+}
+
+.show{display: block;}
